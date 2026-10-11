@@ -1,0 +1,230 @@
+{
+  "name": "Hakan Karateke",
+  "email": "karatekehkn@gmail.com",
+  "url": "https://hakan-karateke.github.io",
+  "updated": "2026-10-11",
+  "links": {
+    "github": "https://github.com/Hakan-karateke",
+    "linkedin": "https://www.linkedin.com/in/hakankarateke/",
+    "researchgate": "https://www.researchgate.net/profile/Hakan-Karateke",
+    "kaggle": "https://www.kaggle.com/hakankarateke",
+    "play": "https://play.google.com/store/apps/dev?id=5122315518768606763"
+  },
+  "skills": [
+    {
+      "name": "Backend",
+      "items": [
+        "C# / .NET",
+        "ASP.NET Core",
+        "Clean Architecture",
+        "CQRS",
+        "REST / SOAP"
+      ]
+    },
+    {
+      "name": "Frontend & Mobile",
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Flutter",
+        "Dart"
+      ]
+    },
+    {
+      "name": "Data & AI",
+      "items": [
+        "Python",
+        "PyTorch",
+        "Vision Transformers",
+        "Scikit-learn",
+        "Pandas"
+      ]
+    },
+    {
+      "name": "DevOps & Quality",
+      "items": [
+        "Git",
+        "Azure DevOps",
+        "CI/CD",
+        "Unit Testing",
+        "MinIO"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Engineer AI Agents with Agent Development Kit (ADK)",
+      "issuer": "Google Cloud",
+      "date": "2026-08",
+      "url": "https://www.credly.com/badges/c101f7dd-ce54-4a99-ac30-e97968833005/public_url",
+      "category": "AI"
+    },
+    {
+      "name": "Create Your First Gemini Enterprise Application",
+      "issuer": "Google Cloud",
+      "date": "2026-08",
+      "url": "https://www.credly.com/badges/708d1747-01a3-4d6d-957a-63e26f251973/public_url",
+      "category": "AI"
+    },
+    {
+      "name": "Certificate for Claude 101",
+      "issuer": "Anthropic",
+      "date": "2026-07",
+      "url": "https://verify.skilljar.com/c/2d254ryacn6s",
+      "category": "AI"
+    },
+    {
+      "name": "Derin Öğrenmeye Giriş",
+      "issuer": "BTK Akademi",
+      "date": "2026-03",
+      "url": "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=6mqF0GoZD0",
+      "category": "AI"
+    },
+    {
+      "name": "Back End with C# Bootcamp",
+      "issuer": "techcareer.net",
+      "date": "2025-01",
+      "url": "https://certificates.techcareer.net/tr/verify/90068731563811",
+      "category": "Software"
+    },
+    {
+      "name": "2023-2024 GDSC Core Member Certificate of Completion",
+      "issuer": "Google Developer Students Club",
+      "date": null,
+      "url": "https://drive.google.com/file/d/1-OqpmSkHi_q0YGned_vGE6keS6J9CB-Y/view",
+      "category": "Community"
+    },
+    {
+      "name": "Proje Döngüsü ve Yönetimi Eğitimi Katılım Sertifikası",
+      "issuer": "Fırat Kalkınma Ajansı",
+      "date": null,
+      "url": "https://drive.google.com/file/d/1kagzOlWdqMRYMr44TR6m3a90CVbCnfm-/view",
+      "category": "Management"
+    },
+    {
+      "name": "C# Programlama",
+      "issuer": "BTK Akademi",
+      "date": "2024-03",
+      "url": "https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=PVghbNK0J0",
+      "category": "Software"
+    },
+    {
+      "name": "Kaggle Pandas Certificate",
+      "issuer": "Kaggle",
+      "date": "2024-01",
+      "url": "https://www.kaggle.com/learn/certification/hakankarateke/pandas",
+      "category": "Data"
+    },
+    {
+      "name": "GDSC 2022 Core Team Certificates-TR Hakan KARATEKE",
+      "issuer": "Google DSC Bingöl University",
+      "date": "2022-07",
+      "url": "https://drive.google.com/file/d/1CuegAOPupV5VMRwWkMikmtoJf5g6jD_7/view",
+      "category": "Community"
+    }
+  ],
+  "projects": [
+    {
+      "id": "yansi",
+      "type": "mobile",
+      "name": "Yansı",
+      "url": "https://play.google.com/store/apps/details?id=com.hakankarateke.yansi",
+      "tags": [
+        "Flutter",
+        "Android",
+        "Game"
+      ],
+      "tr": {
+        "eyebrow": "01 / MOBİL OYUN",
+        "title": "Bir hamle.\nYeni bir yansıma.",
+        "description": "Geçmiş hareketlerinin yankıya dönüşüp oyuna geri döndüğü bir platform oyunu. Sonsuz koşu, tırmanma, labirent ve yerel iki kişilik modlar.",
+        "cta": "Google Play'de keşfet"
+      },
+      "en": {
+        "eyebrow": "01 / MOBILE GAME",
+        "title": "One move.\nA new reflection.",
+        "description": "A platform game where your past movements return as echoes. Explore endless running, climbing, mazes and local two-player modes.",
+        "cta": "Explore on Google Play"
+      }
+    },
+    {
+      "id": "cep-sozlugum",
+      "type": "mobile",
+      "name": "Cep Sözlüğüm",
+      "url": "https://play.google.com/store/apps/details?id=com.hakankarateke.ingilizcecepsozlugum",
+      "tags": [
+        "Flutter",
+        "Android",
+        "Learning"
+      ],
+      "tr": {
+        "eyebrow": "02 / MOBİL UYGULAMA",
+        "title": "Yeni kelimeler.\nYeni olasılıklar.",
+        "description": "Aralıklı tekrar, etkileşimli alıştırmalar ve telaffuz çalışmalarıyla İngilizce kelime öğrenimi. Flutter ile geliştirdiğim, Google Play’de yayımlanan uygulama.",
+        "cta": "Google Play'de keşfet"
+      },
+      "en": {
+        "eyebrow": "02 / MOBILE APP",
+        "title": "New words.\nNew possibilities.",
+        "description": "English vocabulary learning with spaced repetition, interactive exercises and pronunciation practice. Built with Flutter and published on Google Play.",
+        "cta": "Explore on Google Play"
+      }
+    },
+    {
+      "id": "lung-focused-vit-cxr",
+      "type": "research",
+      "name": "Lung-Focused ViT",
+      "url": "https://github.com/Hakan-karateke/lung-focused-vit-cxr",
+      "tags": [
+        "Python",
+        "PyTorch",
+        "ViT-B/16"
+      ],
+      "tr": {
+        "eyebrow": "03 / YÜKSEK LİSANS SEMİNERİ",
+        "title": "Görüntünün ötesini anlamak.",
+        "description": "Göğüs radyografilerinde pnömoni sınıflandırması: anatomik akciğer maskelemesi, kısayol öğrenmesi analizi ve bağımsız veri kümelerinde harici doğrulama.",
+        "cta": "Araştırmayı incele"
+      },
+      "en": {
+        "eyebrow": "03 / M.SC. SEMINAR",
+        "title": "Understanding beyond the image.",
+        "description": "Pneumonia classification in chest radiographs through anatomical lung masking, shortcut learning analysis and external validation on independent datasets.",
+        "cta": "Explore the research"
+      }
+    },
+    {
+      "id": "patient-registration",
+      "type": "software",
+      "name": "Patient Registration & Examination",
+      "url": "https://github.com/Hakan-karateke/Patient-Registration-and-Examination-System",
+      "tags": [
+        "C",
+        "Data Structures",
+        "Algorithms"
+      ],
+      "tr": {
+        "eyebrow": "04 / AÇIK KAYNAK",
+        "title": "Temellerden başlayan mühendislik.",
+        "description": "Veri yapıları ve algoritmalarla geliştirilen hasta kayıt ve muayene sistemi. C diliyle veri organizasyonu ve işlem akışları üzerine bir akademik proje.",
+        "cta": "Kaynak kodunu incele"
+      },
+      "en": {
+        "eyebrow": "04 / OPEN SOURCE",
+        "title": "Engineering from first principles.",
+        "description": "An academic patient registration and examination system built with data structures and algorithms in C, exploring data organization and processing workflows.",
+        "cta": "Explore the source"
+      }
+    }
+  ],
+  "publication": {
+    "title": "Deep Tabular and Sequential Models for Robust SCADA Cybersecurity Using the Custom-Built SCADANet Dataset",
+    "authors": "M. T. Yilmaz, E. Algul, O. Polat, F. Dogan & H. Karateke",
+    "venue": "IEEE Access · 2026",
+    "doi": "10.1109/ACCESS.2026.3691986",
+    "url": "https://ieeexplore.ieee.org/document/11513754/",
+    "tr": "SCADA sistemlerinde siber saldırı tespitini derin öğrenme modelleriyle ele alan makalenin ortak yazarıyım. Çalışmada kullanılan SCADANet veri kümesinin hazırlanmasına katkı sağladım.",
+    "en": "I co-authored this study on deep learning for cyberattack detection in SCADA systems, contributing to the construction of the custom SCADANet dataset."
+  }
+}

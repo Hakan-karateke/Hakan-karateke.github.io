@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hakan-karateke.github.io/sitemap.xml

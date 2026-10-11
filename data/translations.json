@@ -1,0 +1,232 @@
+{
+  "tr": {
+    "title": "Hakan Karateke — Bilgisayar Mühendisi & Geliştirici",
+    "description": "Hakan Karateke'nin kişisel portföyü. Yazılım mühendisliği, mobil uygulamalar, yapay zekâ araştırmaları ve bilimsel yayınlar.",
+    "nav": [
+      "Hakkımda",
+      "Projeler",
+      "Araştırma",
+      "Yolculuk"
+    ],
+    "contact": "İletişime geç",
+    "skip": "İçeriğe geç",
+    "menu": "Menüyü aç / kapat",
+    "heroKicker": "BİLGİSAYAR MÜHENDİSİ · GELİŞTİRİCİ · ARAŞTIRMACI",
+    "heroLead": "Fikirleri koda,",
+    "heroAccent": "olasılıkları gerçeğe.",
+    "heroText": "Yazılım mühendisliğini araştırma merakıyla buluşturuyorum. Web'den mobile, veriden yapay zekâya; anlamlı deneyimler geliştiriyorum.",
+    "explore": "Çalışmalarımı keşfet",
+    "location": "ADANA, TÜRKİYE",
+    "scroll": "KEŞFETMEK İÇİN KAYDIR",
+    "field": "KUANTUMDAN İLHAM ALAN BİR DİJİTAL EVREN",
+    "pause": "Animasyonu durdur",
+    "resume": "Animasyonu başlat",
+    "disciplines": [
+      "Yazılım mühendisliği",
+      "Mobil deneyimler",
+      "Uygulamalı yapay zekâ"
+    ],
+    "aboutKicker": "01 / HAKKIMDA",
+    "aboutTitle": "Merakla başlayan,\nmühendislikle şekillenen.",
+    "aboutText": "Ben Hakan. Bilgisayar mühendisiyim; Limak Technology'de yazılım geliştiriyor, Fırat Üniversitesi'nde yüksek lisans yapıyorum. Güvenilir yazılım sistemleri tasarlamayı, bağımsız mobil ürünler geliştirmeyi ve yapay zekâyı araştırmayı seviyorum.",
+    "aboutText2": "Bir problemi anlamaktan çalışan bir ürüne ulaşmaya kadar, her adımda sağlam temelleri ve açık düşünmeyi önemsiyorum. Bu alan, kişisel projelerimin ve akademik çalışmalarımın buluşma noktası.",
+    "projectKicker": "02 / SEÇİLİ ÇALIŞMALAR",
+    "projectTitle": "Düşünceden\ngerçek dünyaya.",
+    "projectIntro": "Bağımsız geliştirdiğim mobil uygulamalar, açık kaynak çalışmalar ve araştırma projeleri.",
+    "filters": [
+      "Tümü",
+      "Mobil",
+      "Araştırma",
+      "Yazılım"
+    ],
+    "viewGithub": "GitHub profilim",
+    "privacy": "Gizlilik politikası",
+    "terms": "Kullanım koşulları",
+    "allProjects": "Tüm çalışmalar",
+    "researchKicker": "03 / ARAŞTIRMA & YAYIN",
+    "researchTitle": "Veriden bilgiye.\nBilgiden yeni sorulara.",
+    "researchLabel": "HAKEMLİ BİLİMSEL YAYIN",
+    "researchCta": "IEEE Xplore'da oku",
+    "researchRole": "ORTAK YAZAR · VERİ KÜMESİ HAZIRLAMA",
+    "journeyKicker": "04 / DENEYİM & EĞİTİM",
+    "journeyTitle": "Öğrenmeye devam.",
+    "experience": "Deneyim",
+    "education": "Eğitim",
+    "experienceItems": [
+      {
+        "date": "HAZ 2025 — DEVAM",
+        "title": "Associate Software Developer",
+        "place": "Limak Technology",
+        "text": "Yazılım geliştirme, sistem mimarisi ve full-stack mühendislik."
+      },
+      {
+        "date": "EYL 2024 — HAZ 2025",
+        "title": "Yazılım Geliştirme Asistanı",
+        "place": "Limak Technology",
+        "text": "Backend ve frontend geliştirme, test ve yazılım kalitesi."
+      },
+      {
+        "date": "TEM 2024 — EYL 2024",
+        "title": "Yazılım Geliştirme Stajyeri",
+        "place": "Limak Technology",
+        "text": "Profesyonel yazılım geliştirme yolculuğunun ilk adımı."
+      },
+      {
+        "date": "EYL 2022 — TEM 2024",
+        "title": "Yarışma & Proje Takım Lideri",
+        "place": "GDSC · Bingöl Üniversitesi",
+        "text": "Öğrenci topluluğunda takım liderliği ve proje mentorluğu."
+      }
+    ],
+    "educationItems": [
+      {
+        "date": "ŞUB 2026 — DEVAM",
+        "title": "Bilgisayar Mühendisliği",
+        "place": "Fırat Üniversitesi · Yüksek Lisans",
+        "text": "Derin öğrenme, Vision Transformer'lar, medikal görüntü analizi ve model genellemesi."
+      },
+      {
+        "date": "EYL 2021 — HAZ 2025",
+        "title": "Bilgisayar Mühendisliği",
+        "place": "Bingöl Üniversitesi · Lisans",
+        "text": "Mühendislik ve Mimarlık Fakültesi."
+      }
+    ],
+    "certificates": "Sertifikalar & eğitimler",
+    "certificatesText": "Yapay zekâdan yazılım geliştirmeye, sürekli öğrenmenin izleri.",
+    "certificatesCta": "10 sertifika ve eğitimi incele",
+    "contactKicker": "05 / BAĞLANTI KURALIM",
+    "contactTitle": "Bir fikir,\nbir sonraki olasılık.",
+    "contactText": "Yazılım, mobil ürünler veya araştırma üzerine konuşalım.",
+    "mail": "E-posta gönder",
+    "backTop": "Başa dön",
+    "footerNote": "Merakla tasarlandı. Özenle geliştirildi.",
+    "legal": "Sözleşmeler",
+    "legalTitle": "Uygulamalar & sözleşmeler",
+    "legalIntro": "Yansı ve Cep Sözlüğüm için gizlilik politikaları ve kullanım koşulları. Her belgeye ayrı, kalıcı bir bağlantıdan ulaşabilirsiniz.",
+    "home": "Ana sayfa",
+    "lastUpdated": "Son güncelleme",
+    "print": "Yazdır / PDF olarak kaydet",
+    "contents": "İçindekiler",
+    "sitePrivacy": "Site gizliliği",
+    "legalContact": "Sorularınız için",
+    "notFound": "Bu olasılık henüz yok.",
+    "notFoundText": "Aradığınız sayfa taşınmış olabilir veya bu bağlantı mevcut değil.",
+    "backHome": "Ana sayfaya dön"
+  },
+  "en": {
+    "title": "Hakan Karateke — Computer Engineer & Developer",
+    "description": "The personal portfolio of Hakan Karateke. Software engineering, mobile applications, AI research and scientific publications.",
+    "nav": [
+      "About",
+      "Projects",
+      "Research",
+      "Journey"
+    ],
+    "contact": "Let's connect",
+    "skip": "Skip to content",
+    "menu": "Toggle menu",
+    "heroKicker": "COMPUTER ENGINEER · DEVELOPER · RESEARCHER",
+    "heroLead": "Ideas into code,",
+    "heroAccent": "possibilities into reality.",
+    "heroText": "Bringing engineering and curiosity together. From web to mobile, from data to AI — I build experiences that matter.",
+    "explore": "Explore my work",
+    "location": "ADANA, TÜRKİYE",
+    "scroll": "SCROLL TO EXPLORE",
+    "field": "A DIGITAL UNIVERSE INSPIRED BY QUANTUM PHYSICS",
+    "pause": "Pause animation",
+    "resume": "Play animation",
+    "disciplines": [
+      "Software engineering",
+      "Mobile experiences",
+      "Applied artificial intelligence"
+    ],
+    "aboutKicker": "01 / ABOUT",
+    "aboutTitle": "Driven by curiosity.\nShaped by engineering.",
+    "aboutText": "I'm Hakan, a computer engineer developing software at Limak Technology and pursuing an M.Sc. at Fırat University. I enjoy designing reliable systems, building independent mobile products and exploring artificial intelligence.",
+    "aboutText2": "From understanding a problem to shipping a working product, I value strong foundations and clear thinking. This is where my personal projects and academic work come together.",
+    "projectKicker": "02 / SELECTED WORK",
+    "projectTitle": "From a thought\nto the real world.",
+    "projectIntro": "Independent mobile apps, open-source explorations and research projects.",
+    "filters": [
+      "All",
+      "Mobile",
+      "Research",
+      "Software"
+    ],
+    "viewGithub": "My GitHub profile",
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "allProjects": "All work",
+    "researchKicker": "03 / RESEARCH & PUBLICATION",
+    "researchTitle": "From data to insight.\nFrom insight to new questions.",
+    "researchLabel": "PEER-REVIEWED PUBLICATION",
+    "researchCta": "Read on IEEE Xplore",
+    "researchRole": "CO-AUTHOR · DATASET CONSTRUCTION",
+    "journeyKicker": "04 / EXPERIENCE & EDUCATION",
+    "journeyTitle": "Always learning.",
+    "experience": "Experience",
+    "education": "Education",
+    "experienceItems": [
+      {
+        "date": "JUN 2025 — PRESENT",
+        "title": "Associate Software Developer",
+        "place": "Limak Technology",
+        "text": "Software development, system architecture and full-stack engineering."
+      },
+      {
+        "date": "SEP 2024 — JUN 2025",
+        "title": "Software Development Assistant",
+        "place": "Limak Technology",
+        "text": "Backend and frontend development, testing and software quality."
+      },
+      {
+        "date": "JUL 2024 — SEP 2024",
+        "title": "Software Development Intern",
+        "place": "Limak Technology",
+        "text": "The first step in my professional software engineering journey."
+      },
+      {
+        "date": "SEP 2022 — JUL 2024",
+        "title": "Competition & Project Team Leader",
+        "place": "GDSC · Bingöl University",
+        "text": "Team leadership and project mentoring in the student developer community."
+      }
+    ],
+    "educationItems": [
+      {
+        "date": "FEB 2026 — PRESENT",
+        "title": "Computer Engineering",
+        "place": "Fırat University · M.Sc.",
+        "text": "Deep learning, Vision Transformers, medical image analysis and model generalization."
+      },
+      {
+        "date": "SEP 2021 — JUN 2025",
+        "title": "Computer Engineering",
+        "place": "Bingöl University · B.Sc.",
+        "text": "Faculty of Engineering and Architecture."
+      }
+    ],
+    "certificates": "Certificates & courses",
+    "certificatesText": "A continuous learning journey, from artificial intelligence to software development.",
+    "certificatesCta": "Explore 10 certificates & courses",
+    "contactKicker": "05 / GET IN TOUCH",
+    "contactTitle": "One idea.\nThe next possibility.",
+    "contactText": "Let's talk about software, mobile products or research.",
+    "mail": "Send an email",
+    "backTop": "Back to top",
+    "footerNote": "Designed with curiosity. Built with care.",
+    "legal": "Legal",
+    "legalTitle": "Apps & legal documents",
+    "legalIntro": "Privacy policies and terms of use for Yansı and Cep Sözlüğüm. Each document has its own permanent link.",
+    "home": "Home",
+    "lastUpdated": "Last updated",
+    "print": "Print / save as PDF",
+    "contents": "On this page",
+    "sitePrivacy": "Website privacy",
+    "legalContact": "For questions, contact",
+    "notFound": "An unexplored possibility.",
+    "notFoundText": "This page may have moved, or the link doesn't exist.",
+    "backHome": "Back to home"
+  }
+}

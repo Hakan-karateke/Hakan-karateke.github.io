@@ -1,0 +1,13 @@
+{
+  "name": "hakan-karateke.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Hakan Karateke — bilingual portfolio and mobile application policies",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/site.test.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
