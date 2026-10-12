@@ -68,3 +68,14 @@ test('home pages have one primary heading, unique ids and local assets only',asy
     assert.equal([...html.matchAll(/data-category=/g)].length,4);
   }
 });
+test('all supplied credentials are published in both languages with clean destination links',async()=>{
+  const profile=JSON.parse(await readFile(path.join(root,'data/profile.json'),'utf8'));
+  assert.equal(profile.certificates.length,10);
+  for(const lang of ['tr','en']){
+    const html=await readFile(path.join(docs,lang,'credentials/index.html'),'utf8');
+    assert.equal([...html.matchAll(/class="credential-card"/g)].length,10);
+    assert.ok(!html.includes('linkedin.com/safety/go'));
+    assert.ok(!html.includes('profileId='));
+    for(const c of profile.certificates)assert.ok(html.includes(c.url),`Missing credential ${c.name}`);
+  }
+});
