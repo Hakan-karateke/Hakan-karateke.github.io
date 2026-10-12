@@ -14,7 +14,7 @@
 .immersive-page .name-dot{color:#a99cff;text-shadow:0 0 32px #8d7eff80}
 .immersive-page .hero-kicker{color:#b8dcf7}
 .immersive-page .hero-description{color:#a8b5c7}
-.immersive-page .hero-bottom{bottom:43px}
+.immersive-page .hero-bottom{bottom:43px;padding-right:185px}
 .hero-field-note{display:flex;align-items:center;gap:12px;font-size:8px;color:#89a8c2;letter-spacing:.14em}
 .scroll-glyph{display:inline-flex;align-items:center;justify-content:center;width:24px;height:36px;border:1px solid #a4d2ff38;border-radius:16px;color:var(--ice);font-size:14px;box-shadow:inset 0 0 15px #a4d2ff08}
 .immersive-page .button.primary{background:linear-gradient(115deg,#c4eafe,#a2cbf8);border:1px solid #c0e6ff;box-shadow:0 4px 0 #6d9bb63b,0 10px 30px #7dbcf216,inset 0 1px 0 #fff8;transition:transform .25s,box-shadow .25s}
@@ -104,7 +104,7 @@
  .immersive-page .hero-copy{max-width:100%;transform:none;will-change:auto}
  .immersive-page .hero h1{font-size:clamp(66px,18vw,94px)}
  .immersive-page .hero h2{font-size:25px}
- .immersive-page .hero-bottom{bottom:34px;gap:10px}.hero-field-note{font-size:6px;letter-spacing:.025em;gap:6px}
+ .immersive-page .hero-bottom{bottom:34px;gap:10px;padding-right:90px}.hero-field-note{display:none}
  .hero-field-note .scroll-glyph{width:18px;height:27px;font-size:11px}
  .immersive-page .quantum{opacity:.92}
  .quantum-nebula{filter:blur(15px)}.quantum-starfield{opacity:.13;mask-image:linear-gradient(transparent,#000)}

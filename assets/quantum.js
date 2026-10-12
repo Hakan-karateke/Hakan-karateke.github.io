@@ -86,9 +86,9 @@ export class QuantumScene {
   draw({progress,hero,time,pointerX=0,pointerY=0,reduced=false,heroAnchor}){
     if(this.lost||!this.width)return;
     const mobile=this.width<=600,state=sceneAt(reduced?0:progress),departure=smooth(hero);
-    const centerX=mobile?this.width*.5:this.width*(.75+departure*.085);
+    const centerX=mobile?this.width*.5:this.width*(.74+departure*.095);
     const centerY=mobile?(heroAnchor||this.height*.78)*(1-departure)+this.height*.48*departure:this.height*(.50+departure*.025);
-    const scale=mobile?Math.min(this.width*.30,128):Math.min(this.width*.19,this.height*.32,310)*(1-departure*.09);
+    const scale=mobile?Math.min(this.width*.30,128):Math.min(this.width*.175,this.height*.30,290)*(1-departure*.09);
     const rotation=[1.03+progress*3.8+pointerY*.15,-.28+time*.09+progress*9.5+pointerX*.25,-.35+progress*1.7];
     const opacity=1-departure*(mobile?.83:.58);
     this.layout={centerX,centerY,scale,opacity,departure,phase:state.phase};
