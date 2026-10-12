@@ -6,7 +6,7 @@
   "description": "Hakan Karateke — bilingual portfolio and mobile application policies",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/site.test.mjs",
+    "test": "node --test tests/*.test.mjs",
     "dev": "node scripts/serve.mjs"
   },
   "engines": { "node": ">=20" }

@@ -27,6 +27,8 @@ Yerel adres: `http://127.0.0.1:4173`. `data/` içeriği ve `assets/` kaynakları
 | `data/terms.json` | Yeni kullanım koşulu taslakları ve veri silme bilgisi |
 | `assets/style.css` | Responsive tasarım |
 | `assets/app.js` | Filtreler, mobil menü ve durdurulabilir kuantum görseli |
+| `assets/quantum.js` | WebGL parçacık sahnesi, halka/küre/sarmal dönüşümleri ve Canvas yedeği |
+| `assets/experience.css` | Ana sayfanın 3B katmanları, kartlar, bölüm göstergesi ve kaydırma geçişleri |
 | `assets/language.js` | Tarayıcı dili ve elle seçilen dil |
 
 `/tr/` ve `/en/` kalıcı, önceden oluşturulmuş sayfalardır. Dilsiz adresler, varsa kaydedilmiş tercihe, yoksa tarayıcının **birincil** diline göre yönlenir. Türkçe dışındaki diller İngilizceye düşer. Dil tercihi yalnızca `localStorage` içinde `hk-language` anahtarıyla saklanır. Depolama veya JavaScript kapalıysa içerik ve dil bağlantıları kullanılabilir. Arayüzdeki kuantum alanı dekoratif bir parçacık görselidir, bilimsel simülasyon değildir.
@@ -65,3 +67,7 @@ Her adresin `/tr` ve `/en` önekli dil sabit sürümleri de vardır. Cep Sözlü
 - [Google Play kullanıcı verisi politikası](https://support.google.com/googleplay/android-developer/answer/10144311), [GitHub gizlilik bildirimi](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 Space Grotesk fontu yerel sunulur; SIL Open Font License lisansı `assets/fonts/OFL.txt` içindedir. Uygulama görselleri geliştiricinin herkese açık mağaza yayınlarından alınmıştır. Araştırma notları ve ham kaynaklar `.research/` altında yerel tutulur, Git'e eklenmez.
+
+## Hareket ve erişilebilirlik
+
+Ana sayfadaki `QuantumScene`, kaydırma ilerledikçe halka, küre ve çift sarmal arasında dönüşür. WebGL kullanılamıyorsa daha hafif Canvas çizimine geçer. Telefonlarda parçacık sayısı azaltılır; piksel yoğunluğu sınırlıdır. Sekme görünür değilken animasyon döngüsü durur. Sağ alttaki kontrol hareketi durdurur; sistemde `prefers-reduced-motion` açık olduğunda sahne statik, içerik geçişsiz gösterilir. Doğal kaydırma davranışı değiştirilmez. Sözleşme sayfalarına 3B sahne eklenmez.
