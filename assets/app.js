@@ -11,7 +11,6 @@
   menu?.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('is-open',open);});
   nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&menu?.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus();}});
-  document.querySelectorAll('.print-button').forEach(button=>button.addEventListener('click',()=>window.print()));
   let requestUpdate=()=>{};
   const filters=document.querySelectorAll('[data-filter]');
   filters.forEach(button=>button.addEventListener('click',()=>{

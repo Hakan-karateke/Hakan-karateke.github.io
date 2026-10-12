@@ -1,0 +1,251 @@
+{
+  "de": {
+    "summary": "<p><strong>Kurz erklärt:</strong> Yansı erhebt, speichert oder übermittelt keine personenbezogenen Daten an den Entwickler. Das Spiel verbindet sich nicht mit dem Internet, verlangt kein Konto, zeigt keine Werbung und enthält keine Analyse- oder Tracking-Werkzeuge. Spielstände bleiben auf Ihrem Gerät. Im Zweispielermodus kommunizieren die Geräte direkt über das lokale Netzwerk oder Bluetooth; Ihr Standort wird nicht ausgelesen. Ein von Ihnen eingegebener Spitzname wird dem anderen Spieler angezeigt, wie in Abschnitt 4 beschrieben.</p>",
+    "privacy": [
+      [
+        "1. Geltungsbereich",
+        "<p>Diese Datenschutzerklärung gilt für das von Hakan Karateke entwickelte Mobilspiel <strong>Yansı</strong>. Sie beschreibt den Umgang mit Daten bei der Installation und Nutzung der App.</p>"
+      ],
+      [
+        "2. Erhebung personenbezogener Daten",
+        "<p>Yansı fragt weder Namen, E-Mail-Adresse, Telefonnummer, Standort, Kontakte, Fotos, Gerätekennung noch Werbe-ID oder andere personenbezogene Daten ab und erhebt diese nicht. Eine Registrierung, Anmeldung oder Kontoerstellung ist nicht vorgesehen.</p><p>Die App enthält <strong>keine SDKs für Analyse, Absturzberichte, Werbung oder Tracking</strong>. Die direkte Übermittlung eines selbst gewählten Spitznamens an den Mitspieler wird in Abschnitt 4 erläutert.</p>"
+      ],
+      [
+        "3. Auf Ihrem Gerät gespeicherte Informationen",
+        "<p>Zur Speicherung des Spielfortschritts werden folgende Informationen <strong>ausschließlich im lokalen Speicher Ihres Geräts</strong> (Android SharedPreferences) abgelegt. Sie werden an keinen Server gesendet und können weder von uns noch von Dritten eingesehen werden:</p><ul><li>Höchstpunktzahlen und längste Strecke je Spielmodus</li><li>Gesammelte Kristalle und Anzahl der gespielten Runden</li><li>Perfect-Sync-Zähler</li><li>Einstellungen für Klickgeräusch, Hintergrundmusik, Vibration, Sprache, Serienerinnerung und Steuerung</li><li>Serie täglicher Herausforderungen, Fortschritt täglicher Aufgaben, freigeschaltete Erfolge und Verlauf der besten Runde des Tages (Ghost)</li></ul><p>Diese Daten sind anonym und identifizieren Sie nicht. Sie werden beim Deinstallieren der App vollständig gelöscht. In der Entwicklerversion können sie auch über die Funktion zum Löschen des Spielstands entfernt werden.</p>"
+      ],
+      [
+        "4. Berechtigungen und ihr Zweck",
+        "<p>Die Einzelspielermodi benötigen keine Laufzeitberechtigungen und können im Flugmodus gespielt werden. Die folgenden Berechtigungen werden für die jeweils genannte Funktion verwendet. Wenn Sie eine zur Laufzeit angefragte Berechtigung ablehnen, bleibt das übrige Spiel nutzbar; nur die betreffende Funktion wird eingeschränkt.</p><ul><li><strong>Internet, Netzwerk- und WLAN-Status, Multicast (INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE, CHANGE_WIFI_MULTICAST_STATE):</strong> Damit sich zwei Telefone im selben lokalen Netzwerk finden und in den WLAN-Modi verbinden können. Dabei werden keine Daten ins Internet gesendet.</li><li><strong>Geräte in der Nähe / Bluetooth (BLUETOOTH_SCAN, BLUETOOTH_ADVERTISE, BLUETOOTH_CONNECT, NEARBY_WIFI_DEVICES):</strong> Damit sich zwei Telefone ohne gemeinsames Netzwerk über Bluetooth und Wi-Fi Direct (Google Nearby Connections) verbinden können. Diese Berechtigungen werden erst beim Erstellen oder Suchen eines Raums im WLAN-Bereich angefragt.</li><li><strong>Standort (nur Android 12 und älter):</strong> Diese Android-Versionen verlangen die Standortberechtigung für die Suche nach Bluetooth-Geräten in der Nähe. Ihr Standort wird niemals ausgelesen, gespeichert oder übertragen.</li><li><strong>Benachrichtigungen (POST_NOTIFICATIONS, RECEIVE_BOOT_COMPLETED):</strong> Für eine einzelne lokale Erinnerung am Abend, wenn Ihre tägliche Serie zu enden droht. Sie wird auf Ihrem Gerät geplant und stammt nicht von einem Server. Sie lässt sich in den Einstellungen ausschalten.</li></ul><p>In den WLAN- und Nahbereichsmodi werden keine Daten ins Internet gesendet. Wir betreiben keinen Server, keine Benutzerkonten und keinen Vermittlungsdienst für Mitspieler. Die beiden Telefone kommunizieren direkt. Die einzige übermittelte persönliche Angabe ist der von Ihnen eingegebene <strong>Spitzname</strong>; er erscheint nur auf dem Bildschirm des Mitspielers und wird nicht gespeichert. Die auf dem Gastgebergerät angezeigte lokale Netzwerkadresse, beispielsweise 192.168.1.5, dient nur dazu, dass sich ein Freund im selben Netzwerk manuell verbinden kann.</p><p><strong>Teilen:</strong> Wenn Sie auf der Ergebnisseite TEILEN wählen, werden ein Bild mit Ihrem Ergebnis und ein Text an das Freigabemenü Ihres Geräts übergeben. Sie bestimmen das Ziel. Der Text enthält einen Herausforderungscode mit Kartengenerierungswert, Punktzahl und Verlauf Ihrer Runde. Dieser Code enthält keine Angaben, die Sie identifizieren. Ohne Ihre Freigabe verlässt dabei nichts Ihr Gerät.</p><p>Zugriff auf Kamera, Mikrofon, Speicher oder Kontakte wird nicht angefragt. Der Link zur Datenschutzerklärung in den Einstellungen öffnet diese Seite im Standardbrowser; die App ruft sie nicht selbst ab. Für den Besuch gelten die Datenschutzbedingungen des Hosting-Dienstes dieser Seite.</p>"
+      ],
+      [
+        "5. Komponenten von Drittanbietern",
+        "<p>Die App verwendet die folgenden quelloffenen Softwarekomponenten. Sie erheben in dieser App keine personenbezogenen Daten und senden keine solchen Daten an externe Server:</p><ul><li><strong>Flutter</strong> – Anwendungsframework von Google</li><li><strong>shared_preferences</strong> – lokale Einstellungen und Spielstände</li><li><strong>audioplayers</strong> – Wiedergabe der in der App erzeugten Melodien</li><li><strong>flutter_animate</strong> – Oberflächenanimationen</li><li><strong>url_launcher</strong> – Öffnen dieser Erklärung im Browser</li><li><strong>package_info_plus</strong> – Anzeige der Versionsnummer</li><li><strong>flutter_local_notifications</strong> und <strong>timezone</strong> – lokale Planung der Serienerinnerung</li><li><strong>share_plus</strong> – Übergabe Ihres Ergebnisses an das System-Freigabemenü</li><li><strong>nearby_connections</strong> (Google Nearby Connections API) – direkte Verbindung naher Telefone ohne gemeinsames Netzwerk</li><li><strong>permission_handler</strong> – Anfragen der genannten Laufzeitberechtigungen</li><li>Schriftart <strong>Rajdhani</strong> – SIL Open Font License 1.1</li></ul><p>Bei einem Bezug über Google Play gelten außerdem dessen eigene Datenschutzbestimmungen. Nearby Connections ist Teil der Google Play-Dienste; die Verbindung wird direkt zwischen den beiden Telefonen hergestellt.</p>"
+      ],
+      [
+        "6. Datenschutz von Kindern",
+        "<p>Yansı ist für alle Altersgruppen geeignet. Die App erhebt von niemandem personenbezogene Daten, auch nicht von Kindern unter 13 Jahren.</p>"
+      ],
+      [
+        "7. Datensicherheit und Ihre Rechte",
+        "<p>Wir verfügen über keine personenbezogenen Daten von Ihnen, die wir bereitstellen, weitergeben oder löschen könnten. Ihre lokal gespeicherten Spielstände können Sie jederzeit durch Deinstallation der App löschen. Da wir diese Daten nicht speichern, ist dafür keine Auskunfts-, Berichtigungs- oder Löschungsanfrage an uns erforderlich. Bei Fragen können Sie sich an die unten angegebene Adresse wenden.</p>"
+      ],
+      [
+        "8. Änderungen dieser Erklärung",
+        "<p>Diese Erklärung kann aktualisiert werden, wenn neue Funktionen hinzukommen. Bei wesentlichen Änderungen wird das Datum „Zuletzt aktualisiert“ auf dieser Seite angepasst. Die aktuelle Fassung wird auf dieser Seite veröffentlicht.</p>"
+      ],
+      [
+        "9. Kontakt",
+        "<p>Bei Fragen zu dieser Datenschutzerklärung oder zur App:<br><strong>Hakan Karateke</strong><br>E-Mail: <a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a></p>"
+      ]
+    ],
+    "terms": [
+      [
+        "1. Geltungsbereich und Entwickler",
+        "<p>Diese Nutzungsbedingungen regeln die Nutzung des von Hakan Karateke entwickelten Mobilspiels Yansı. Kontakt: <a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a>. Stand dieser Fassung: 12. Oktober 2026.</p>"
+      ],
+      [
+        "2. Nutzungsrecht",
+        "<p>Die App wird zur persönlichen, rechtmäßigen Nutzung bereitgestellt. Der Zugang überträgt keine geistigen Eigentumsrechte an der App. Für quelloffene Komponenten gelten ihre jeweiligen Lizenzen. Gesetzlich ausdrücklich erlaubte Nutzungen bleiben unberührt.</p>"
+      ],
+      [
+        "3. Zweck der App",
+        "<p>Yansı ist ein Unterhaltungsspiel. Die Einzelspielermodi laufen auf Ihrem Gerät. Zweispielermodi benötigen kompatible Geräte, eine lokale Verbindung und die entsprechenden Berechtigungen. Punkte und Kristalle im Spiel sind weder echtes Geld noch Zahlungsmittel oder finanzielle Ansprüche.</p>"
+      ],
+      [
+        "4. Ihre Verantwortung",
+        "<p>Nutzen Sie die App rechtmäßig und achten Sie auf die Rechte anderer und die Sicherheit Ihres Geräts. Das Stören des Betriebs, unbefugte Zugriffsversuche und irreführende Inhalte oder Spitznamen sind untersagt. Für die Rechte an Inhalten, die Sie hinzufügen oder teilen, sind Sie verantwortlich.</p>"
+      ],
+      [
+        "5. Geräte, Konten und Daten",
+        "<p>Ein Benutzerkonto ist nicht erforderlich. Der Spielfortschritt wird auf Ihrem Gerät gespeichert. Durch Deinstallation oder Löschen der App-Daten kann er verloren gehen. Im lokalen Mehrspielermodus kann der andere Spieler Ihren geteilten Spitznamen sehen.</p>"
+      ],
+      [
+        "6. Datenschutz und Berechtigungen",
+        "<p>Die <a href=\"/de/apps/yansi/privacy/\">Datenschutzerklärung von Yansı</a> erläutert den Umgang mit Daten und die Geräteberechtigungen. Diese Bedingungen ersetzen keine erforderliche Berechtigungs- oder Einwilligungsabfrage. Das Ablehnen einer Berechtigung kann die jeweilige Funktion einschränken.</p>"
+      ],
+      [
+        "7. Dienste Dritter",
+        "<p>Für Google Play und die zur lokalen Verbindung verwendeten Google Play-Dienste gelten eigene Bedingungen. Ihre Verfügbarkeit, die Gerätekompatibilität und Änderungen am Betriebssystem können die Funktionen der App beeinflussen.</p>"
+      ],
+      [
+        "8. Aktualisierungen und Verfügbarkeit",
+        "<p>Funktionen können aus Kompatibilitäts-, Sicherheits- oder Produktgründen aktualisiert werden. Ein ununterbrochener oder vollständig fehlerfreier Betrieb wird nicht zugesichert. Wesentliche Änderungen werden angemessen bekannt gegeben. Änderungen der Verarbeitung personenbezogener Daten werden zusätzlich in der Datenschutzerklärung erläutert.</p>"
+      ],
+      [
+        "9. Rechte und Haftungsgrenzen",
+        "<p>Diese Bedingungen schränken weder zwingende Verbraucherrechte noch gesetzlich nicht beschränkbare Haftung ein. Bei Fehlern oder einer Verletzung Ihrer Rechte können Sie den Entwickler kontaktieren.</p>"
+      ],
+      [
+        "10. Beendigung der Nutzung und Kontakt",
+        "<p>Sie können die Nutzung durch Deinstallation beenden. Dabei werden die lokalen Spieldaten gelöscht. Bei Fragen schreiben Sie an <a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a>.</p>"
+      ]
+    ]
+  },
+  "zh": {
+    "summary": "<p><strong>概要：</strong>Yansı 不向开发者收集、存储或传输个人数据。游戏不会连接互联网，不要求创建账户，不展示广告，也不包含分析或跟踪工具。分数仅保存在您的设备上。双人模式通过局域网或蓝牙直接连接两部手机，不读取您的位置。您输入的昵称会按第 4 节所述显示给另一位玩家。</p>",
+    "privacy": [
+      [
+        "1. 本政策的适用范围",
+        "<p>本隐私政策适用于 Hakan Karateke 开发的移动游戏 <strong>Yansı</strong>，说明安装和使用本应用时的数据处理方式。</p>"
+      ],
+      [
+        "2. 收集的个人数据",
+        "<p>Yansı 不要求或收集您的姓名、电子邮箱、电话号码、位置、通讯录、照片、设备标识符、广告标识符或其他个人数据。本应用没有注册、登录或创建账户功能。</p><p>本应用不包含任何用于<strong>分析、崩溃报告、广告或跟踪的软件开发工具包（SDK）</strong>。您自行选择的昵称如何直接发送给另一位玩家，详见第 4 节。</p>"
+      ],
+      [
+        "3. 存储在设备上的信息",
+        "<p>为保存游戏进度，下列信息<strong>仅存储在您设备的本地存储空间</strong>中（Android SharedPreferences），不会发送到任何服务器，我们和第三方均无法查看：</p><ul><li>各游戏模式的最高分和最远距离</li><li>累计获得的水晶数量和游戏局数</li><li>Perfect Sync 计数</li><li>点击音效、背景音乐、振动、语言、连续挑战提醒和操作方式等偏好设置</li><li>每日挑战连续记录、每日任务进度、已解锁的成就，以及当天最佳一局的路径（幽灵轨迹）</li></ul><p>这些数据是匿名的，不用于识别您的身份。卸载应用后，数据将被完全删除。游戏的开发版本也提供删除存档的选项。</p>"
+      ],
+      [
+        "4. 权限及申请原因",
+        "<p>所有单人模式都不需要运行时权限，可在飞行模式下游玩。以下权限仅用于所述功能。拒绝运行时申请的权限不会影响游戏的其他部分，只会限制相关功能。</p><ul><li><strong>互联网、网络与 Wi-Fi 状态、多播（INTERNET、ACCESS_NETWORK_STATE、ACCESS_WIFI_STATE、CHANGE_WIFI_MULTICAST_STATE）：</strong>用于 Wi-Fi 模式下同一局域网中的两部手机相互发现并连接，不会将数据发送到互联网。</li><li><strong>附近设备／蓝牙（BLUETOOTH_SCAN、BLUETOOTH_ADVERTISE、BLUETOOTH_CONNECT、NEARBY_WIFI_DEVICES）：</strong>用于不在同一网络的两部手机通过蓝牙和 Wi-Fi Direct（Google Nearby Connections）配对。仅在 Wi-Fi 功能中创建或查找房间时申请。</li><li><strong>位置权限（仅 Android 12 及更早版本）：</strong>这些 Android 版本要求取得位置权限才能扫描附近蓝牙设备。您的位置绝不会被读取、存储或发送。</li><li><strong>通知（POST_NOTIFICATIONS、RECEIVE_BOOT_COMPLETED）：</strong>用于在每日连续记录即将中断时，于晚间发送一次本地提醒。提醒在您的设备上安排，不来自服务器，可在设置中关闭。</li></ul><p>Wi-Fi 和附近设备模式不会将数据发送到互联网。我们不运营服务器、用户账户或玩家匹配服务。两部手机直接通信；唯一共享的个人信息是玩家输入的<strong>昵称</strong>，它仅显示在对方屏幕上，不会被存储。房主屏幕显示的本地网络地址（例如 192.168.1.5）仅供同一网络中的朋友手动连接。</p><p><strong>分享：</strong>点击结果页面的“分享”时，含有分数的图片和文字会交给设备的系统分享菜单，由您选择接收应用。文字含有“挑战码”，其中包括地图种子、分数和本局路径，不包含可识别您身份的信息。除非您主动分享，否则这些内容不会离开设备。</p><p>本应用绝不申请相机、麦克风、存储或通讯录访问权限。在设置中点击隐私政策链接时，本页面会在设备的默认浏览器中打开，应用本身不连接该页面。访问本页面时适用其托管服务的数据处理规则。</p>"
+      ],
+      [
+        "5. 第三方组件",
+        "<p>本应用使用以下开源软件组件。这些组件在本应用中不收集个人数据，也不将此类数据发送到外部服务器：</p><ul><li><strong>Flutter</strong>：Google 提供的应用框架</li><li><strong>shared_preferences</strong>：本地设置与分数存储</li><li><strong>audioplayers</strong>：播放应用内生成的旋律</li><li><strong>flutter_animate</strong>：界面动画</li><li><strong>url_launcher</strong>：在浏览器中打开本政策</li><li><strong>package_info_plus</strong>：显示版本号</li><li><strong>flutter_local_notifications</strong>、<strong>timezone</strong>：在设备上安排连续挑战提醒</li><li><strong>share_plus</strong>：将结果交给系统分享菜单</li><li><strong>nearby_connections</strong>（Google Nearby Connections API）：在没有共同网络时连接附近手机</li><li><strong>permission_handler</strong>：运行时申请上述权限</li><li><strong>Rajdhani</strong> 字体：SIL Open Font License 1.1</li></ul><p>通过 Google Play 分发应用时，Google Play 自身的隐私政策和数据处理规则也适用。Nearby Connections 是 Google Play 服务的一部分，连接直接建立在两部手机之间。</p>"
+      ],
+      [
+        "6. 儿童隐私",
+        "<p>Yansı 适合所有年龄段。应用不收集任何人的个人数据，包括未满 13 周岁的儿童。</p>"
+      ],
+      [
+        "7. 数据安全和您的权利",
+        "<p>我们不持有可以向您提供、共享或删除的个人数据。您可以随时卸载应用，删除设备上的游戏进度。由于我们不存储这些数据，您无需为此向我们提出访问、更正或删除请求。如有疑问，可通过下方邮箱联系我们。</p>"
+      ],
+      [
+        "8. 政策变更",
+        "<p>应用增加新功能时，本政策可能更新。如有重大变更，本页面的“最后更新”日期会相应调整。最新版本始终在本页面发布。</p>"
+      ],
+      [
+        "9. 联系方式",
+        "<p>如果您对本隐私政策或应用有任何疑问，请联系：<br><strong>Hakan Karateke</strong><br>电子邮箱：<a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a></p>"
+      ]
+    ],
+    "terms": [
+      [
+        "1. 适用范围和开发者",
+        "<p>本使用条款规定 Hakan Karateke 开发的移动游戏 Yansı 的使用条件。联系邮箱：<a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a>。本版本日期为 2026 年 10 月 12 日。</p>"
+      ],
+      [
+        "2. 使用许可",
+        "<p>本应用供个人合法使用。获得应用访问权限并不意味着应用的知识产权转让给您。开源组件仍受各自许可证约束。法律明确允许的使用权利不受影响。</p>"
+      ],
+      [
+        "3. 应用用途",
+        "<p>Yansı 是一款娱乐游戏。单人模式在您的设备上运行。双人模式需要兼容设备、本地连接及相关权限。游戏中的分数和水晶不是真实货币、支付工具或财务权益。</p>"
+      ],
+      [
+        "4. 您的责任",
+        "<p>请依法使用本应用，尊重他人权利并维护设备安全。不得破坏服务运行、尝试未经授权的访问，或使用具有误导性的内容或昵称。您应对自己添加或分享的内容所涉及的权利负责。</p>"
+      ],
+      [
+        "5. 设备、账户和数据",
+        "<p>本应用无需用户账户。游戏进度保存在您的设备上；卸载应用或清除应用数据可能导致进度丢失。在本地多人游戏中，另一位玩家可以看到您分享的昵称。</p>"
+      ],
+      [
+        "6. 隐私和权限",
+        "<p><a href=\"/zh/apps/yansi/privacy/\">Yansı 隐私政策</a>说明数据处理方式和设备权限。本条款不替代任何必要的权限申请或同意程序。拒绝某项权限可能限制相关功能。</p>"
+      ],
+      [
+        "7. 第三方服务",
+        "<p>Google Play 及用于本地连接的 Google Play 服务适用各自的条款。其可用性、设备兼容性和操作系统变更可能影响应用功能。</p>"
+      ],
+      [
+        "8. 更新和可用性",
+        "<p>应用功能可能因兼容性、安全或产品需要而更新。我们不承诺服务始终不中断或完全没有错误。重大变更将以适当方式告知。涉及个人数据处理的变更也会在隐私政策中说明。</p>"
+      ],
+      [
+        "9. 权利和责任限制",
+        "<p>本条款不排除法律规定的强制性消费者权利，也不排除或限制依法不得排除或限制的责任。发现错误或权利受到侵害时，您可以联系开发者。</p>"
+      ],
+      [
+        "10. 停止使用和联系方式",
+        "<p>您可以通过卸载应用停止使用。卸载时，本地游戏数据会被删除。如有问题，请发送邮件至 <a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a>。</p>"
+      ]
+    ]
+  },
+  "ar": {
+    "summary": "<p><strong>ملخص:</strong> لا تجمع Yansı بيانات شخصية لدى المطوّر ولا تخزّنها لديه ولا ترسلها إليه. لا تتصل اللعبة بالإنترنت، ولا تطلب إنشاء حساب، ولا تعرض إعلانات، ولا تتضمن أدوات للتحليل أو التتبّع. تبقى نتائجك على جهازك فقط. في وضع اللاعبين، يتصل الهاتفان مباشرة عبر الشبكة المحلية أو البلوتوث، ولا يُقرأ موقعك مطلقًا. يظهر الاسم المستعار الذي تُدخله للاعب الآخر وفقًا للقسم 4.</p>",
+    "privacy": [
+      [
+        "1. نطاق هذه السياسة",
+        "<p>تنطبق سياسة الخصوصية هذه على لعبة الهاتف المحمول <strong>Yansı</strong> التي طوّرها Hakan Karateke. وهي تشرح ممارسات التعامل مع البيانات عند تثبيت التطبيق واستخدامه.</p>"
+      ],
+      [
+        "2. البيانات الشخصية التي تُجمع",
+        "<p>لا تطلب Yansı اسمك أو بريدك الإلكتروني أو رقم هاتفك أو موقعك أو جهات اتصالك أو صورك أو معرّف جهازك أو معرّف الإعلانات أو أي بيانات شخصية أخرى، ولا تجمعها. لا توجد في التطبيق عملية تسجيل أو تسجيل دخول أو إنشاء حساب.</p><p>لا يتضمن التطبيق أي حزم برمجية <strong>للتحليلات أو تقارير الأعطال أو الإعلانات أو التتبّع</strong>. يوضّح القسم 4 مشاركة الاسم المستعار الذي تختاره مباشرة مع اللاعب الآخر.</p>"
+      ],
+      [
+        "3. المعلومات المخزّنة على جهازك",
+        "<p>لحفظ تقدّمك في اللعبة، تُخزّن المعلومات التالية <strong>في التخزين المحلي لجهازك فقط</strong> باستخدام Android SharedPreferences. ولا تُرسل إلى أي خادم، ولا يمكننا أو لأي طرف ثالث الاطلاع عليها:</p><ul><li>أعلى النتائج وأطول مسافة في كل وضع لعب</li><li>إجمالي البلورات التي جمعتها وعدد الجولات التي لعبتها</li><li>عدادات Perfect Sync</li><li>تفضيلات صوت النقر والموسيقى الخلفية والاهتزاز واللغة وتذكير سلسلة الأيام وطريقة التحكم</li><li>سلسلة التحديات اليومية، وتقدّم المهام اليومية، والإنجازات المفتوحة، ومسار أفضل جولة في اليوم (الشبح)</li></ul><p>هذه البيانات مجهولة الهوية ولا تحدّد شخصيتك. تُحذف بالكامل عند إزالة التطبيق. ويمكن حذفها أيضًا باستخدام خيار حذف الحفظ المتاح في نسخة التطوير من اللعبة.</p>"
+      ],
+      [
+        "4. الأذونات وأسباب طلبها",
+        "<p>لا تحتاج أوضاع اللاعب الواحد إلى أذونات وقت التشغيل، ويمكن لعبها في وضع الطيران. تُستخدم الأذونات التالية للميزة المحدّدة فقط. رفض إذن يُطلب أثناء التشغيل لا يعطّل بقية اللعبة، بل يحدّ من الميزة المرتبطة به.</p><ul><li><strong>الإنترنت وحالة الشبكة وWi-Fi والبث المتعدد (INTERNET، ACCESS_NETWORK_STATE، ACCESS_WIFI_STATE، CHANGE_WIFI_MULTICAST_STATE):</strong> لتمكين هاتفين على الشبكة المحلية نفسها من العثور على بعضهما والاتصال في أوضاع Wi-Fi. لا تُرسل أي بيانات إلى الإنترنت.</li><li><strong>الأجهزة القريبة / البلوتوث (BLUETOOTH_SCAN، BLUETOOTH_ADVERTISE، BLUETOOTH_CONNECT، NEARBY_WIFI_DEVICES):</strong> لإقران هاتفين لا يتصلان بالشبكة نفسها عبر البلوتوث وWi-Fi Direct باستخدام Google Nearby Connections. تُطلب فقط عند إنشاء غرفة أو البحث عنها في قسم Wi-Fi.</li><li><strong>الموقع (Android 12 والإصدارات الأقدم فقط):</strong> تتطلب هذه الإصدارات إذن الموقع للبحث عن أجهزة بلوتوث قريبة. لا يُقرأ موقعك أو يُخزّن أو يُرسل مطلقًا.</li><li><strong>الإشعارات (POST_NOTIFICATIONS، RECEIVE_BOOT_COMPLETED):</strong> لإرسال تذكير محلي واحد مساءً عندما توشك سلسلة أيامك على الانقطاع. يُجدول التذكير على جهازك ولا يأتي من خادم، ويمكن إيقافه من الإعدادات.</li></ul><p>لا تُرسل بيانات إلى الإنترنت في أوضاع Wi-Fi والأجهزة القريبة. ليست لدينا خوادم أو حسابات أو خدمة لمطابقة اللاعبين. يتواصل الهاتفان مباشرة، والمعلومة الشخصية الوحيدة التي تُشارك هي <strong>الاسم المستعار</strong> الذي يُدخله اللاعب؛ يظهر فقط على شاشة الخصم ولا يُخزّن. عنوان الشبكة المحلية الظاهر على جهاز المضيف، مثل 192.168.1.5، مخصّص فقط لتمكين صديق على الشبكة نفسها من الاتصال يدويًا.</p><p><strong>المشاركة:</strong> عند الضغط على «مشاركة» في شاشة النتيجة، تُسلّم صورة تعرض نتيجتك ونص إلى قائمة المشاركة في جهازك، وتختار أنت الوجهة. يحتوي النص على «رمز تحدٍّ» يتضمن بذرة إنشاء الخريطة ونتيجتك ومسار جولتك. لا يحمل الرمز معلومات تحدّد هويتك. لا تغادر هذه المعلومات جهازك ما لم تشاركها.</p><p>لا يُطلب الوصول إلى الكاميرا أو الميكروفون أو التخزين أو جهات الاتصال. عند الضغط على رابط سياسة الخصوصية في الإعدادات، تُفتح هذه الصفحة في المتصفح الافتراضي لجهازك؛ ولا يتصل التطبيق بالصفحة بنفسه. تنطبق ممارسات معالجة البيانات الخاصة بخدمة استضافة هذه الصفحة عند زيارتها.</p>"
+      ],
+      [
+        "5. مكوّنات الأطراف الثالثة",
+        "<p>يستخدم التطبيق المكتبات البرمجية المفتوحة المصدر التالية. لا تجمع هذه المكوّنات بيانات شخصية في هذا التطبيق ولا ترسل مثل هذه البيانات إلى خوادم خارجية:</p><ul><li><strong>Flutter</strong> — إطار عمل التطبيقات من Google</li><li><strong>shared_preferences</strong> — حفظ الإعدادات والنتائج محليًا</li><li><strong>audioplayers</strong> — تشغيل الألحان المُنشأة داخل التطبيق</li><li><strong>flutter_animate</strong> — حركات واجهة المستخدم</li><li><strong>url_launcher</strong> — فتح هذه السياسة في المتصفح</li><li><strong>package_info_plus</strong> — عرض رقم الإصدار</li><li><strong>flutter_local_notifications</strong> و<strong>timezone</strong> — جدولة تذكير سلسلة الأيام على الجهاز</li><li><strong>share_plus</strong> — تسليم النتيجة إلى قائمة المشاركة في النظام</li><li><strong>nearby_connections</strong> (واجهة Google Nearby Connections) — ربط الهواتف القريبة دون شبكة مشتركة</li><li><strong>permission_handler</strong> — طلب الأذونات المذكورة أثناء التشغيل</li><li>خط <strong>Rajdhani</strong> — ترخيص SIL Open Font License 1.1</li></ul><p>إذا وُزّع التطبيق عبر Google Play، تنطبق كذلك سياسة الخصوصية وممارسات البيانات الخاصة بـGoogle Play. تُعدّ Nearby Connections جزءًا من خدمات Google Play، ويُنشأ الاتصال مباشرة بين الهاتفين.</p>"
+      ],
+      [
+        "6. خصوصية الأطفال",
+        "<p>لعبة Yansı مناسبة لجميع الأعمار. لا يجمع التطبيق بيانات شخصية من أي شخص، بما في ذلك الأطفال دون 13 عامًا.</p>"
+      ],
+      [
+        "7. أمن البيانات وحقوقك",
+        "<p>لا نحتفظ ببيانات شخصية عنك يمكننا إتاحتها أو مشاركتها أو حذفها. يمكنك حذف تقدّم اللعبة المخزّن محليًا في أي وقت بإزالة التطبيق. ولأننا لا نخزّن هذه البيانات، لا تحتاج إلى إرسال طلب وصول أو تصحيح أو حذف إلينا لهذا الغرض. يمكنك التواصل معنا عبر العنوان أدناه إذا كانت لديك أسئلة.</p>"
+      ],
+      [
+        "8. تغييرات هذه السياسة",
+        "<p>قد تُحدّث هذه السياسة عند إضافة ميزات جديدة إلى التطبيق. عند إجراء تغيير جوهري، سيُعدّل تاريخ «آخر تحديث» في هذه الصفحة. تُنشر النسخة الحالية دائمًا في هذه الصفحة.</p>"
+      ],
+      [
+        "9. التواصل",
+        "<p>للاستفسار عن سياسة الخصوصية أو التطبيق:<br><strong>Hakan Karateke</strong><br>البريد الإلكتروني: <a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a></p>"
+      ]
+    ],
+    "terms": [
+      [
+        "1. النطاق والمطوّر",
+        "<p>تنظّم هذه الشروط استخدام لعبة الهاتف المحمول Yansı التي طوّرها Hakan Karateke. للتواصل: <a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a>. تاريخ هذه النسخة هو 12 أكتوبر 2026.</p>"
+      ],
+      [
+        "2. حق الاستخدام",
+        "<p>يُقدّم التطبيق للاستخدام الشخصي المشروع. لا ينقل الوصول إليه حقوق الملكية الفكرية الخاصة به. تظل المكوّنات المفتوحة المصدر خاضعة لتراخيصها الخاصة، وتبقى الحقوق التي يسمح بها القانون صراحة محفوظة.</p>"
+      ],
+      [
+        "3. غرض التطبيق",
+        "<p>Yansı لعبة ترفيهية. تعمل أوضاع اللاعب الواحد على جهازك. تتطلب أوضاع اللاعبين أجهزة متوافقة واتصالًا محليًا والأذونات ذات الصلة. النتائج والبلورات داخل اللعبة ليست عملة حقيقية أو وسيلة دفع أو استحقاقًا ماليًا.</p>"
+      ],
+      [
+        "4. مسؤولياتك",
+        "<p>استخدم التطبيق بصورة قانونية تحترم حقوق الآخرين وأمن جهازك. يُحظر تعطيل عمل الخدمة أو محاولة الوصول غير المصرّح به أو استخدام محتوى أو أسماء مستعارة مضلّلة. أنت مسؤول عن الحقوق المتعلقة بالمحتوى الذي تضيفه أو تشاركه.</p>"
+      ],
+      [
+        "5. الأجهزة والحسابات والبيانات",
+        "<p>لا يلزم إنشاء حساب مستخدم. يُخزّن تقدّم اللعبة على جهازك؛ وقد تؤدي إزالة التطبيق أو مسح بياناته إلى فقدان التقدّم. يمكن للاعب الآخر رؤية الاسم المستعار الذي تشاركه في جلسة اللعب المحلي المتعدد.</p>"
+      ],
+      [
+        "6. الخصوصية والأذونات",
+        "<p>تشرح <a href=\"/ar/apps/yansi/privacy/\">سياسة خصوصية Yansı</a> معالجة البيانات وأذونات الجهاز. لا تحلّ هذه الشروط محل أي إجراء مطلوب للحصول على إذن أو موافقة. قد يحدّ رفض أحد الأذونات من الميزة المرتبطة به.</p>"
+      ],
+      [
+        "7. خدمات الأطراف الثالثة",
+        "<p>تخضع Google Play وخدمات Google Play المستخدمة للاتصال المحلي لشروطها الخاصة. قد يؤثر توفرها وتوافق جهازك وتغييرات نظام التشغيل في وظائف التطبيق.</p>"
+      ],
+      [
+        "8. التحديثات والتوفر",
+        "<p>قد تُحدّث الميزات لأسباب تتعلق بالتوافق أو الأمن أو احتياجات المنتج. لا يُضمن التشغيل المتواصل أو الخالي تمامًا من الأخطاء. ستُعلن التغييرات الجوهرية بطريقة مناسبة، وستُوضّح تغييرات معالجة البيانات الشخصية أيضًا في سياسة الخصوصية.</p>"
+      ],
+      [
+        "9. الحقوق وحدود المسؤولية",
+        "<p>لا تلغي هذه الشروط حقوق المستهلك الإلزامية أو المسؤوليات التي لا يجوز تقييدها قانونًا. يمكنك التواصل مع المطوّر بشأن الأخطاء أو انتهاك حقوقك.</p>"
+      ],
+      [
+        "10. إنهاء الاستخدام والتواصل",
+        "<p>يمكنك التوقف عن استخدام التطبيق بإزالته. تُحذف بيانات اللعبة المحلية عند إزالة التطبيق. للاستفسارات، راسل <a href=\"mailto:hakankarateke231@gmail.com\">hakankarateke231@gmail.com</a>.</p>"
+      ]
+    ]
+  }
+}

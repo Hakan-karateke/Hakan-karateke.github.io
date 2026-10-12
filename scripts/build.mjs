@@ -1,16 +1,23 @@
 import { readFile, writeFile, mkdir, cp } from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
+import { renderAppDocument } from './legal.mjs';
 
 const root = path.resolve(import.meta.dirname, '..');
 const read = async file => JSON.parse(await readFile(path.join(root, file), 'utf8'));
-const [profile, translations, privacy, terms] = await Promise.all([
-  read('data/profile.json'), read('data/translations.json'), read('data/privacy.json'), read('data/terms.json')
+const [profile, translations, privacy, terms, appLocales, legalUI, localizedYansi] = await Promise.all([
+  read('data/profile.json'), read('data/translations.json'), read('data/privacy.json'), read('data/terms.json'),
+  read('data/app-locales.json'), read('data/legal-ui.json'), read('data/yansi-localized.json')
 ]);
+for(const [lang,content] of Object.entries(localizedYansi)) {
+  const sections=items=>items.map(([title,html])=>`<h2>${title}</h2>${html}`).join('');
+  privacy.yansi[lang]={date:privacy.yansi.en.date,html:content.summary+sections(content.privacy)};
+  terms.yansi[lang]={date:terms.yansi.en.date,html:sections(content.terms)};
+}
 const out = path.join(root, 'docs');
 await mkdir(out, { recursive: true });
 await cp(path.join(root, 'assets'), path.join(out, 'assets'), { recursive: true });
-const versions = Object.fromEntries(await Promise.all(['style.css','experience.css','app.js','quantum.js','language.js'].map(async file => [file,createHash('sha256').update(await readFile(path.join(root,'assets',file))).digest('hex').slice(0,12)])));
+const versions = Object.fromEntries(await Promise.all(['style.css','experience.css','legal.css','app.js','quantum.js','language.js'].map(async file => [file,createHash('sha256').update(await readFile(path.join(root,'assets',file))).digest('hex').slice(0,12)])));
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const lines = value => escape(value).replaceAll('\n', '<br>');
 const arrow = '<span aria-hidden="true">↗</span>';
@@ -66,7 +73,7 @@ function legalHub(lang,auto=false) {
   const t=translations[lang];
   return shell(lang,'legal/',`<main id="main" class="container legal-main"><p class="eyebrow">${t.legal}</p><h1>${t.legalTitle}</h1><p class="legal-lead">${t.legalIntro}</p><div class="legal-cards">${profile.projects.filter(p=>p.type==='mobile').map(p=>`<article class="legal-card"><img src="/assets/${p.id}-icon.webp" width="64" height="64" alt=""><h2>${p.name}</h2><p>${p[lang].description}</p><a href="/${lang}/apps/${p.id}/privacy/">${t.privacy} ${arrow}</a><a href="/${lang}/apps/${p.id}/terms/">${t.terms} ${arrow}</a>${p.id==='cep-sozlugum'?`<a href="/${lang}/apps/cep-sozlugum/delete-account/">${lang==='tr'?'Hesap ve veri silme':'Account & data deletion'} ${arrow}</a>`:''}</article>`).join('')}</div><a class="text-link" href="/${lang}/privacy/">${t.sitePrivacy} ${arrow}</a></main>`,{title:t.legalTitle,auto});
 }
-function documentPage(lang,route,title,html,{date=profile.updated,source,notice,auto=false}={}) {
+function documentPage(lang,route,title,html,{date=profile.updated,notice,auto=false}={}) {
   const t=translations[lang];
   const headings=[];
   html=html.replace(/<h([234])([^>]*)>([\s\S]*?)<\/h\1>/g,(_,level,attrs,content)=>{
@@ -74,11 +81,11 @@ function documentPage(lang,route,title,html,{date=profile.updated,source,notice,
     headings.push({id,text:content.replace(/<[^>]*>/g,'')});
     return `<h${level} id="${id}">${content}</h${level}>`;
   });
-  return shell(lang,route,`<main id="main" class="container legal-main"><div class="breadcrumbs"><a href="/${lang}/">${t.home}</a><span>/</span><a href="/${lang}/legal/">${t.legal}</a></div><p class="eyebrow">${t.legal}</p><h1>${title}</h1><div class="document-meta"><span>${t.lastUpdated}: <time datetime="${date}">${new Intl.DateTimeFormat(lang==='tr'?'tr-TR':'en-GB',{dateStyle:'long',timeZone:'UTC'}).format(new Date(date))}</time></span><button class="print-button">${t.print} ↗</button></div>${notice?`<p class="document-notice">${notice}</p>`:''}<div class="document-layout"><aside class="toc"><p class="eyebrow">${t.contents}</p><ol>${headings.map(h=>`<li><a href="#${h.id}">${h.text}</a></li>`).join('')}</ol><a class="text-link" href="/${lang}/legal/">← ${t.legalTitle}</a></aside><article class="legal-content">${html}${source?`<div class="source-note">${lang==='tr'?'Mevcut yayımlanmış politikanın içerik korunarak taşınan kopyası.':'Migrated copy of the existing published policy, with its content preserved.'} ${external(source,lang==='tr'?'Önceki yayın':'Previous publication')}</div>`:''}</article></div></main>`,{title,auto});
+  return shell(lang,route,`<main id="main" class="container legal-main"><div class="breadcrumbs"><a href="/${lang}/">${t.home}</a><span>/</span><a href="/${lang}/legal/">${t.legal}</a></div><p class="eyebrow">${t.legal}</p><h1>${title}</h1><div class="document-meta"><span>${t.lastUpdated}: <time datetime="${date}">${new Intl.DateTimeFormat(lang==='tr'?'tr-TR':'en-GB',{dateStyle:'long',timeZone:'UTC'}).format(new Date(date))}</time></span></div>${notice?`<p class="document-notice">${notice}</p>`:''}<div class="document-layout"><aside class="toc"><p class="eyebrow">${t.contents}</p><ol>${headings.map(h=>`<li><a href="#${h.id}">${h.text}</a></li>`).join('')}</ol><a class="text-link" href="/${lang}/legal/">← ${t.legalTitle}</a></aside><article class="legal-content">${html}</article></div></main>`,{title,auto});
 }
 function sitePrivacy(lang,auto=false) {
   const tr=lang==='tr';
-  const html=tr?`<h2>Bu site hakkında</h2><p>Bu kişisel portföy Hakan Karateke tarafından işletilir. İletişim: <a href="mailto:${profile.email}">${profile.email}</a>.</p><h2>Ziyaret verileri</h2><p>Sitede hesap oluşturma, iletişim formu, reklam veya analiz çerezi bulunmaz. Site sahibi ziyaretçilerin gezinme verilerini bir veritabanında toplamaz. Bağlantılara tıklamadan önce yazı tipleri ve görseller dâhil site kaynakları yalnızca bu siteden yüklenir.</p><h2>Dil tercihi</h2><p>İlk ziyarette tarayıcınızın birincil dili Türkçe ise Türkçe, diğer dillerde İngilizce gösterilir. Elle seçtiğiniz dil tarayıcınızın localStorage alanında hk-language adıyla saklanır; sunucuya gönderilmez. Tarayıcınızın site verilerini temizleyerek tercihi silebilirsiniz.</p><h2>Barındırma</h2><p>Site GitHub Pages üzerinden sunulur. GitHub, hizmetin sunulması ve güvenliği için IP adresi ve teknik istek bilgileri gibi verileri işleyebilir. Ayrıntılar için <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Gizlilik Bildirimi</a> geçerlidir.</p><h2>Dış bağlantılar ve iletişim</h2><p>Google Play, GitHub, LinkedIn, ResearchGate ve Kaggle bağlantıları ilgili hizmetlere yönlendirir. Bu hizmetlerin kendi gizlilik politikaları uygulanır. E-posta bağlantısı e-posta uygulamanızı açar; gönderdiğiniz bilgiler yalnızca talebinizi yanıtlamak amacıyla kullanılır.</p><h2>Mobil uygulamalar</h2><p>Bu bildirim yalnızca portföy sitesini kapsar. Yansı ve Cep Sözlüğüm için ayrı uygulama gizlilik politikalarını <a href="/tr/legal/">sözleşmeler bölümünde</a> okuyabilirsiniz.</p>`:`<h2>About this website</h2><p>This personal portfolio is operated by Hakan Karateke. Contact: <a href="mailto:${profile.email}">${profile.email}</a>.</p><h2>Visit data</h2><p>The website has no accounts, contact forms, advertising or analytics cookies. The site owner does not collect browsing data in a database. Until you follow an external link, site resources, including fonts and images, are served from this website only.</p><h2>Language preference</h2><p>On your first visit, Turkish is selected if your browser's primary language is Turkish; otherwise English is shown. A language you explicitly choose is stored in your browser's localStorage under hk-language and is not sent to a server. Clear this website's browser data to remove the preference.</p><h2>Hosting</h2><p>This website is hosted on GitHub Pages. GitHub may process IP addresses and technical request information to deliver and secure its services. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub General Privacy Statement</a>.</p><h2>External links and contact</h2><p>Links to Google Play, GitHub, LinkedIn, ResearchGate and Kaggle take you to those services, where their privacy policies apply. Email links open your email application. Information you send by email is used to respond to your request.</p><h2>Mobile applications</h2><p>This notice covers the portfolio website only. Read the separate privacy policies for Yansı and Cep Sözlüğüm in the <a href="/en/legal/">legal section</a>.</p>`;
+  const html=tr?`<h2>Bu site hakkında</h2><p>Bu kişisel portföy Hakan Karateke tarafından işletilir. İletişim: <a href="mailto:${profile.email}">${profile.email}</a>.</p><h2>Ziyaret verileri</h2><p>Sitede hesap oluşturma, iletişim formu, reklam veya analiz çerezi bulunmaz. Site sahibi ziyaretçilerin gezinme verilerini bir veritabanında toplamaz. Bağlantılara tıklamadan önce yazı tipleri ve görseller dâhil site kaynakları yalnızca bu siteden yüklenir.</p><h2>Dil tercihi</h2><p>Portföyde Türkçe ve İngilizce, Yansı sözleşmelerinde ayrıca Almanca, Çince ve Arapça sunulur. Dilsiz bir bağlantıyı ilk açtığınızda tarayıcınızın birincil dili sayfada destekleniyorsa o dil, aksi hâlde İngilizce gösterilir. Elle seçtiğiniz dil tarayıcınızın localStorage alanında hk-language adıyla saklanır; sunucuya gönderilmez. Tarayıcınızın site verilerini temizleyerek tercihi silebilirsiniz.</p><h2>Barındırma</h2><p>Site GitHub Pages üzerinden sunulur. GitHub, hizmetin sunulması ve güvenliği için IP adresi ve teknik istek bilgileri gibi verileri işleyebilir. Ayrıntılar için <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Gizlilik Bildirimi</a> geçerlidir.</p><h2>Dış bağlantılar ve iletişim</h2><p>Google Play, GitHub, LinkedIn, ResearchGate ve Kaggle bağlantıları ilgili hizmetlere yönlendirir. Bu hizmetlerin kendi gizlilik politikaları uygulanır. E-posta bağlantısı e-posta uygulamanızı açar; gönderdiğiniz bilgiler yalnızca talebinizi yanıtlamak amacıyla kullanılır.</p><h2>Mobil uygulamalar</h2><p>Bu bildirim yalnızca portföy sitesini kapsar. Yansı ve Cep Sözlüğüm için ayrı uygulama gizlilik politikalarını <a href="/tr/legal/">sözleşmeler bölümünde</a> okuyabilirsiniz.</p>`:`<h2>About this website</h2><p>This personal portfolio is operated by Hakan Karateke. Contact: <a href="mailto:${profile.email}">${profile.email}</a>.</p><h2>Visit data</h2><p>The website has no accounts, contact forms, advertising or analytics cookies. The site owner does not collect browsing data in a database. Until you follow an external link, site resources, including fonts and images, are served from this website only.</p><h2>Language preference</h2><p>The portfolio is available in Turkish and English; Yansı documents also support German, Chinese and Arabic. On a language-neutral link, your browser’s primary language is selected if that page supports it; otherwise English is shown. A language you explicitly choose is stored in your browser's localStorage under hk-language and is not sent to a server. Clear this website's browser data to remove the preference.</p><h2>Hosting</h2><p>This website is hosted on GitHub Pages. GitHub may process IP addresses and technical request information to deliver and secure its services. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub General Privacy Statement</a>.</p><h2>External links and contact</h2><p>Links to Google Play, GitHub, LinkedIn, ResearchGate and Kaggle take you to those services, where their privacy policies apply. Email links open your email application. Information you send by email is used to respond to your request.</p><h2>Mobile applications</h2><p>This notice covers the portfolio website only. Read the separate privacy policies for Yansı and Cep Sözlüğüm in the <a href="/en/legal/">legal section</a>.</p>`;
   return documentPage(lang,'privacy/',translations[lang].sitePrivacy,html,{auto});
 }
 for(const lang of ['tr','en']) {
@@ -86,25 +93,23 @@ for(const lang of ['tr','en']) {
   await save(`${lang}/credentials`,credentials(lang));
   await save(`${lang}/legal`,legalHub(lang));
   await save(`${lang}/privacy`,sitePrivacy(lang));
-  for(const app of ['yansi','cep-sozlugum']) {
-    const p=profile.projects.find(p=>p.id===app), policy=privacy[app][lang];
-    await save(`${lang}/apps/${app}/privacy`,documentPage(lang,`apps/${app}/privacy/`,`${p.name} — ${translations[lang].privacy}`,policy.html,policy));
-    await save(`${lang}/apps/${app}/terms`,documentPage(lang,`apps/${app}/terms/`,`${p.name} — ${translations[lang].terms}`,terms[app][lang].html,{notice:terms[app][lang].notice}));
-  }
-  await save(`${lang}/apps/cep-sozlugum/delete-account`,documentPage(lang,'apps/cep-sozlugum/delete-account/',lang==='tr'?'Cep Sözlüğüm — Hesap ve veri silme':'Cep Sözlüğüm — Account & data deletion',terms.deletion[lang]));
 }
 await save('',home('en',true));
 await save('credentials',credentials('en',true));
 await save('legal',legalHub('en',true));
 await save('privacy',sitePrivacy('en',true));
-for(const app of ['yansi','cep-sozlugum']) {
-  const p=profile.projects.find(p=>p.id===app);
-  await save(`apps/${app}/privacy`,documentPage('en',`apps/${app}/privacy/`,`${p.name} — Privacy policy`,privacy[app].en.html,{...privacy[app].en,auto:true}));
-  await save(`apps/${app}/terms`,documentPage('en',`apps/${app}/terms/`,`${p.name} — Terms of use`,terms[app].en.html,{notice:terms[app].en.notice,auto:true}));
+for(const [appId,languages] of Object.entries(appLocales)) {
+  const app=profile.projects.find(p=>p.id===appId);
+  const types=appId==='cep-sozlugum'?['privacy','terms','delete-account']:['privacy','terms'];
+  for(const type of types)for(const locale of [...languages,'']) {
+    const lang=locale||'en',auto=!locale;
+    const document=type==='privacy'?privacy[appId][lang]:type==='terms'?terms[appId][lang]:{html:terms.deletion[lang],date:privacy[appId][lang].date};
+    if(!document?.html)throw new Error(`Missing ${appId}/${type}/${lang}`);
+    await save(`${locale?locale+'/':''}apps/${appId}/${type}`,renderAppDocument({lang,app,type,document,auto,profile,locales:appLocales,ui:legalUI,versions}));
+  }
 }
-await save('apps/cep-sozlugum/delete-account',documentPage('en','apps/cep-sozlugum/delete-account/','Cep Sözlüğüm — Account & data deletion',terms.deletion.en,{auto:true}));
 await writeFile(path.join(out,'404.html'),shell('en','',`<main id="main" class="container not-found"><p class="eyebrow">ERROR / 404</p><h1>An unexplored<br>possibility<span>.</span></h1><p>This page doesn't exist. / Bu sayfa bulunamadı.</p><div class="hero-buttons"><a class="button primary" href="/tr/">Türkçe ana sayfa ↗</a><a class="button secondary" href="/en/">English home ↗</a></div></main>`,{title:'404',noindex:true}));
 await writeFile(path.join(out,'.nojekyll'),'');
 await writeFile(path.join(out,'robots.txt'),`User-agent: *\nAllow: /\nSitemap: ${profile.url}/sitemap.xml\n`);
-await writeFile(path.join(out,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.filter(p=>/^(tr|en)(\/|$)/.test(p)).map(p=>`<url><loc>${profile.url}/${p}/</loc></url>`).join('')}</urlset>`);
+await writeFile(path.join(out,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.filter(p=>['tr','en',...Object.values(appLocales).flat()].includes(p.split('/')[0])).map(p=>`<url><loc>${profile.url}/${p}/</loc></url>`).join('')}</urlset>`);
 console.log(`Built ${pages.length} static pages, 404, sitemap and assets into docs/.`);

@@ -53,7 +53,7 @@ test('migrated privacy policy bodies contain no executable HTML or external embe
   for(const langs of Object.values(policies))for(const p of Object.values(langs)){
     assert.ok(!/<(?:script|iframe|object|embed|style)\b|\son\w+\s*=|javascript:/i.test(p.html));
     assert.ok(p.html.includes('hakankarateke231@gmail.com'));
-    assert.ok(p.source.startsWith('https://sites.google.com/'));
+    assert.ok(!p.source);
   }
   assert.ok(policies['cep-sozlugum'].tr.html.includes('Crashlytics'));
   assert.ok(policies['cep-sozlugum'].tr.html.includes('30 gün'));

@@ -24,14 +24,18 @@ Yerel adres: `http://127.0.0.1:4173`. `data/` içeriği ve `assets/` kaynakları
 | `data/profile.json` | Profil, sosyal bağlantılar, projeler, sertifikalar |
 | `data/translations.json` | Türkçe ve İngilizce arayüz ve biyografi |
 | `data/privacy.json` | Mevcut yayımlanmış uygulama gizlilik politikaları |
-| `data/terms.json` | Yeni kullanım koşulu taslakları ve veri silme bilgisi |
+| `data/terms.json` | Türkçe / İngilizce kullanım koşulları ve veri silme bilgisi |
+| `data/app-locales.json` | Uygulamaya göre sözleşme dilleri |
+| `data/legal-ui.json` | Sözleşme sayfalarının yerelleştirilmiş arayüzü |
+| `data/yansi-localized.json` | Yansı Almanca, Çince ve Arapça gizlilik / kullanım koşulları |
+| `scripts/legal.mjs`, `assets/legal.css` | Uygulama ikonlu sözleşme sayfaları ve RTL düzeni |
 | `assets/style.css` | Responsive tasarım |
 | `assets/app.js` | Filtreler, mobil menü ve durdurulabilir kuantum görseli |
 | `assets/quantum.js` | WebGL parçacık sahnesi, halka/küre/sarmal dönüşümleri ve Canvas yedeği |
 | `assets/experience.css` | Ana sayfanın 3B katmanları, kartlar, bölüm göstergesi ve kaydırma geçişleri |
 | `assets/language.js` | Tarayıcı dili ve elle seçilen dil |
 
-`/tr/` ve `/en/` kalıcı, önceden oluşturulmuş sayfalardır. Dilsiz adresler, varsa kaydedilmiş tercihe, yoksa tarayıcının **birincil** diline göre yönlenir. Türkçe dışındaki diller İngilizceye düşer. Dil tercihi yalnızca `localStorage` içinde `hk-language` anahtarıyla saklanır. Depolama veya JavaScript kapalıysa içerik ve dil bağlantıları kullanılabilir. Arayüzdeki kuantum alanı dekoratif bir parçacık görselidir, bilimsel simülasyon değildir.
+`/tr/` ve `/en/` kalıcı, önceden oluşturulmuş sayfalardır. Dilsiz adresler, varsa kaydedilmiş tercihe, yoksa tarayıcının **birincil** diline göre yönlenir. Her sayfa kendi dil kapsamına göre seçim yapar; desteklenmeyen diller İngilizceye düşer. Dil tercihi yalnızca `localStorage` içinde `hk-language` anahtarıyla saklanır. Depolama veya JavaScript kapalıysa içerik ve dil bağlantıları kullanılabilir. Arayüzdeki kuantum alanı dekoratif bir parçacık görselidir, bilimsel simülasyon değildir.
 
 ## GitHub Pages
 
@@ -46,12 +50,13 @@ Bu repo bir kullanıcı sitesidir; `/assets/` gibi kökten başlayan yollar bili
 | Yansı | `/apps/yansi/privacy/` | `/apps/yansi/terms/` |
 | Cep Sözlüğüm | `/apps/cep-sozlugum/privacy/` | `/apps/cep-sozlugum/terms/` |
 
-Her adresin `/tr` ve `/en` önekli dil sabit sürümleri de vardır. Cep Sözlüğüm hesap silme bilgisi: `/apps/cep-sozlugum/delete-account/`.
+Yansı adreslerinin `/tr`, `/en`, `/de`, `/zh`, `/ar`; Cep Sözlüğüm adreslerinin `/tr` ve `/en` önekli dil sabit sürümleri vardır. Yansı dilleri uygulamanın güncel dil enumundan doğrulandı. Cep Sözlüğüm arayüzü Türkçedir; sözleşmelerin İngilizce sürümü ayrıca sunulur. Dil bağlantıları JavaScript olmadan da çalışır. Arapça belgeler sağdan sola sunulur. Cep Sözlüğüm hesap silme bilgisi: `/apps/cep-sozlugum/delete-account/`.
 
 ### Yayın ve sözleşme durumu
 
-- Gizlilik politikaları geliştiricinin mevcut Google Sites yayınlarından içerikleri korunarak taşındı. Son güncelleme tarihleri Yansı için 4 Ekim 2026, Cep Sözlüğüm için 7 Ekim 2026 olarak korundu. Kaynak bağlantısı sayfalarda bulunur.
-- Önceden yayımlanmış uygulamaya özel kullanım koşulu bulunamadı. Yeni hazırlanan kullanım koşulları **inceleme taslağıdır, henüz yürürlükte değildir**. Geliştirici, koşulları ürün davranışı ve uygulanabilir hukuk açısından incelemeli; uygulamalarında yürürlüğe alacağı sürüm için taslak notunu, kapsam metnini ve yürürlük tarihini güncellemelidir. Metinlerin hukuki yeterliliğine dair garanti verilmez.
+- Gizlilik politikaları mevcut veri işleme açıklamaları temel alınarak bu sitede sunulur. Yansı'nın beş dildeki sürümü 12 Ekim 2026 tarihinde düzenlendi; Cep Sözlüğüm politikasının tarihi 7 Ekim 2026 olarak korundu. Eski yayınlara bağlantı verilmez.
+- Kullanım koşulları 12 Ekim 2026 tarihli sürümler olarak sunulur. Metinlerin yayımlanması, uygulama içinde gerekli bildirim veya rıza süreçlerinin yerine geçmez.
+- Google Play'e verilecek gizlilik adresi doğrudan herkese açık HTML metni sunar; PDF indirme veya yazdırma düğmesi yoktur. Tarayıcının standart yazdırma özelliği engellenmez.
 - Cep Sözlüğüm'ün 11 Ekim 2026'da incelenen Google Play Veri Güvenliği özeti veri toplanmadığını söylerken ayrıntılı mevcut gizlilik politikası Firebase Authentication, Firestore, Analytics, Crashlytics ve reklam kimliği kullanımını açıklıyor. Uygulama adreslerini değiştirmeden önce bu mevcut çelişki geliştirici tarafından giderilmelidir. Bu görevde uygulamalara veya mağaza kayıtlarına değişiklik yapılmamıştır.
 - Veri silme sayfası mevcut politikanın e-posta ile talep ve 30 günlük süre bilgisini yansıtır; talep göndermez, Firebase'e bağlanmaz. Uygulama içindeki hesap silme işlevinin varlığı bu site tarafından doğrulanmış değildir.
 - CV PDF'lerinin tamamı yayımlanmadı; portföyde mesleki özet, eğitim ve bağımsız çalışmalar kullanıldı.
@@ -63,7 +68,6 @@ Her adresin `/tr` ve `/en` önekli dil sabit sürümleri de vardır. Cep Sözlü
 - [Yansı](https://play.google.com/store/apps/details?id=com.hakankarateke.yansi), [Cep Sözlüğüm](https://play.google.com/store/apps/details?id=com.hakankarateke.ingilizcecepsozlugum): uygulama açıklamaları, simgeler ve ekran görüntüleri.
 - [ViT seminer çalışması](https://github.com/Hakan-karateke/lung-focused-vit-cxr), [Hasta kayıt sistemi](https://github.com/Hakan-karateke/Patient-Registration-and-Examination-System).
 - [IEEE Access yayını](https://ieeexplore.ieee.org/document/11513754/), DOI `10.1109/ACCESS.2026.3691986`.
-- [Yansı mevcut politika](https://sites.google.com/view/yansigame), [Cep Sözlüğüm mevcut politika](https://sites.google.com/view/ingilizcecepsozlugum/ana-sayfa).
 - [Google Play kullanıcı verisi politikası](https://support.google.com/googleplay/android-developer/answer/10144311), [GitHub gizlilik bildirimi](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
 Space Grotesk fontu yerel sunulur; SIL Open Font License lisansı `assets/fonts/OFL.txt` içindedir. Uygulama görselleri geliştiricinin herkese açık mağaza yayınlarından alınmıştır. Araştırma notları ve ham kaynaklar `.research/` altında yerel tutulur, Git'e eklenmez.
