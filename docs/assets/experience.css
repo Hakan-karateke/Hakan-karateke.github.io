@@ -38,6 +38,7 @@
 .quantum-reticle i:nth-child(1){left:0;top:0;border-top-width:1px;border-left-width:1px}.quantum-reticle i:nth-child(2){right:0;top:0;border-top-width:1px;border-right-width:1px}.quantum-reticle i:nth-child(3){left:0;bottom:0;border-bottom-width:1px;border-left-width:1px}.quantum-reticle i:nth-child(4){right:0;bottom:0;border-bottom-width:1px;border-right-width:1px}
 .quantum-caption{position:absolute;left:var(--field-x);top:calc(var(--field-y) + var(--field-size)*.55);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;font:9px var(--font);letter-spacing:.14em;color:#89a8c9;opacity:var(--field-alpha);white-space:nowrap}
 .quantum-caption span:last-child{font-size:12px;letter-spacing:.08em;color:#a7a5ca}
+@media(min-width:601px){.quantum-caption{top:calc(var(--field-y) + var(--field-size)*.48)}}
 .quantum-phase::before{content:'';display:inline-block;width:4px;height:4px;margin-right:9px;border-radius:50%;background:#9ce2ff;box-shadow:0 0 9px #9ce2ff}
 .quantum-corner{position:absolute;left:calc(var(--field-x) - var(--field-size)*.48);top:calc(var(--field-y) - var(--field-size)*.54);font:32px var(--font);letter-spacing:-.06em;color:#a6c5e13d;opacity:var(--field-alpha)}
 .quantum-corner span{display:block;font-size:7px;color:#85a7c0;letter-spacing:.15em;margin-top:5px}
@@ -104,7 +105,7 @@
  .immersive-page .hero-copy{max-width:100%;transform:none;will-change:auto}
  .immersive-page .hero h1{font-size:clamp(66px,18vw,94px)}
  .immersive-page .hero h2{font-size:25px}
- .immersive-page .hero-bottom{bottom:34px;gap:10px;padding-right:90px}.hero-field-note{display:none}
+ .immersive-page .hero-bottom{bottom:34px;gap:10px;padding-right:90px}.immersive-page .hero-field-note{display:none}
  .hero-field-note .scroll-glyph{width:18px;height:27px;font-size:11px}
  .immersive-page .quantum{opacity:.92}
  .quantum-nebula{filter:blur(15px)}.quantum-starfield{opacity:.13;mask-image:linear-gradient(transparent,#000)}
