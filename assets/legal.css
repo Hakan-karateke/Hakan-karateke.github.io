@@ -3,8 +3,9 @@
 .legal-header-nav{display:flex;align-items:center;gap:28px;font-size:12px;color:var(--muted)}
 .legal-header-nav a:hover{color:var(--accent)}
 .document-heading{display:flex;align-items:center;gap:24px;margin-bottom:32px}
+.document-heading>div{min-width:0}
 .document-heading .eyebrow{margin-bottom:12px}
-.document-heading h1{font-size:clamp(29px,4vw,49px);line-height:1.2;letter-spacing:-.035em;margin:0}
+.document-heading h1{font-size:clamp(29px,4vw,49px);line-height:1.2;letter-spacing:-.035em;margin:0;overflow-wrap:anywhere;hyphens:auto}
 .document-app-icon{width:80px;height:80px;flex-shrink:0;border-radius:19px;border:1px solid #c6dcfa2e;box-shadow:0 10px 30px #0004}
 .document-languages{display:flex;align-items:center;gap:22px;padding:18px 22px;border:1px solid var(--line);background:#111d2b;border-radius:12px;margin-bottom:26px}
 .document-language-label{font-size:12px;color:var(--muted);flex-shrink:0}
